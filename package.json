@@ -1,0 +1,23 @@
+{
+  "name": "anki-kklc-template",
+  "version": "0.1.0",
+  "description": "Anki card templates for Kodansha Kanji Learner's Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robjweiss/anki-kklc-template.git"
+  },
+  "keywords": [
+    "anki",
+    "kklc"
+  ],
+  "author": "Rob Weiss",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/robjweiss/anki-kklc-template/issues"
+  },
+  "homepage": "https://github.com/robjweiss/anki-kklc-template#readme"
+}
