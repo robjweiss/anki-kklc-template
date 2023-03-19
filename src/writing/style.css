@@ -1,0 +1,367 @@
+/* Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Rampart+One);
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+/* Colors */
+
+:root {
+  /* Gradient Background */
+  --yellow: #fbda61;
+  --pink: #ff5acd;
+
+  /* Card Background */
+  --translucent-off-white: rgba(245, 245, 245, 0.3);
+
+  /* HR */
+  --dark-yellow: #f3d73d;
+  --light-yellow: #f6e16d;
+}
+
+/* HTML */
+
+html {
+  background-color: var(--yellow);
+  background-image: linear-gradient(45deg, var(--yellow) 0%, var(--pink) 100%);
+  background-attachment: fixed;
+}
+
+/* Card */
+
+.card {
+  background-color: var(--translucent-off-white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 40%;
+
+  margin: 20% auto;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  box-shadow: 0px 0px 5px black;
+}
+
+/* Card (mobile) */
+
+@media (max-width: 800px) {
+  .card {
+    width: 70%;
+  }
+}
+
+/* Character */
+
+.character {
+  font-family: "Rampart One", sans-serif;
+
+  /* Overrides */
+  margin-block-start: unset;
+  margin-block-end: unset;
+
+  color: white;
+  text-shadow: 1px 1px 1px black;
+
+  font-size: 70px;
+}
+
+/* HR */
+
+hr {
+  /* Resets */
+  border-style: unset;
+  border-width: unset;
+  border-radius: 5px;
+
+  /* Overrides */
+  margin-block-start: 25px;
+  margin-block-end: 30px;
+
+  width: 90%;
+  height: 3px;
+  color: var(--dark-yellow);
+
+  /* From: https://codepen.io/rokku/pen/XWJxKdo */
+  box-shadow: 0 0 1px var(--light-yellow), 0 0 2px var(--light-yellow),
+    0 0 6px var(--light-yellow), 0 0 12px var(--light-yellow),
+    inset 0 0 1px var(--light-yellow), inset 0 0 2px var(--light-yellow),
+    inset 0 0 6px var(--light-yellow), inset 0 0 12px var(--light-yellow);
+}
+
+/* Meaning */
+
+.meaning {
+  /* Resets */
+  margin-block-start: unset;
+  margin-block-end: unset;
+
+  font-family: "VT323", sans-serif;
+
+  font-size: 40px;
+}
+
+/* Jisho Stroke Order Diagram */
+
+[data-color-theme*="d"] .stroke_order_diagram--guide_line {
+  stroke: #444;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--bounding_box {
+  stroke: #444;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--current_path {
+  stroke: #eee;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--existing_path {
+  stroke: #999;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--path_start {
+  fill: rgba(255, 0, 0, 0.7);
+}
+
+[data-color-theme*="a"] .stroke_order_diagram--guide_line {
+  stroke: #444;
+}
+
+[data-color-theme*="a"] .stroke_order_diagram--bounding_box {
+  stroke: #444;
+}
+
+[data-color-theme*="a"] .stroke_order_diagram--current_path {
+  stroke: #eee;
+}
+
+[data-color-theme*="a"] .stroke_order_diagram--existing_path {
+  stroke: #999;
+}
+
+[data-color-theme*="a"] .stroke_order_diagram--path_start {
+  fill: rgba(255, 0, 0, 0.7);
+}
+
+.stroke_order_diagram--outer_container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  border-radius: 3px;
+
+  background-color: white;
+
+  box-shadow: 0 0 10px grey;
+}
+
+.stroke_order_diagram--outer_container > svg {
+  /* Customization */
+  height: auto !important;
+  width: auto !important;
+
+  display: block;
+}
+
+.stroke_order_diagram--guide_line {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: square;
+  stroke-dasharray: 5, 5;
+}
+
+.stroke_order_diagram--bounding_box {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: square;
+}
+
+.stroke_order_diagram--current_path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stroke_order_diagram--existing_path {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.stroke_order_diagram--path_start {
+  fill: rgba(255, 0, 0, 0.7);
+  stroke: none;
+}
+
+/* Jisho stroke animation */
+
+[data-color-theme*="d"] .kanji_strokes .kanji_play_button {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(42, 42, 42, 0.6);
+}
+
+[data-color-theme*="d"] .kanji_strokes .actions {
+  background-color: #444;
+}
+
+[data-color-theme*="d"] .kanji_strokes .actions h3 {
+  color: #ddd;
+}
+
+[data-color-theme*="a"] .kanji_strokes .kanji_play_button {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(42, 42, 42, 0.6);
+}
+
+[data-color-theme*="a"] .kanji_strokes .actions {
+  background-color: #444;
+}
+
+[data-color-theme*="a"] .kanji_strokes .actions h3 {
+  color: #ddd;
+}
+
+.kanji_strokes {
+  position: relative;
+  min-height: 150px;
+  margin-top: 10px;
+  visibility: hidden;
+  overflow: hidden;
+  width: 136px;
+}
+
+.kanji_strokes .stage {
+  position: relative;
+  margin-left: -15px;
+}
+
+.kanji_strokes canvas {
+  display: block;
+}
+
+.kanji_strokes .buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.kanji_strokes .actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.kanji_strokes .replay_button,
+.kanji_strokes .toggle_kanji_actions {
+  color: #aaa;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.kanji_strokes .actions,
+.kanji_strokes .buttons,
+.kanji_strokes.activated .kanji_play_button,
+.kanji_strokes.show_actions .buttons {
+  visibility: hidden;
+}
+
+.kanji_strokes.loaded,
+.kanji_strokes.activated .buttons,
+.kanji_strokes.show_actions .actions {
+  visibility: visible;
+}
+
+.kanji_strokes .actions .ok_button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.kanji_strokes .actions h3 {
+  font-size: 12px;
+  color: #666;
+  margin: 6px 0 2px 0;
+}
+
+.kanji_strokes .set {
+  clear: both;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.kanji_strokes .actions .button {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  -webkit-transition: none;
+  transition: none;
+  border-radius: 2px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  color: #888;
+  font-size: 12px;
+}
+
+.kanji_strokes .button:hover {
+  background-color: #777;
+  color: #fff;
+}
+
+.kanji_strokes .minus {
+  float: left;
+}
+
+.kanji_strokes .plus {
+  float: right;
+}
+
+.kanji_strokes .label {
+  display: block;
+  background-color: transparent;
+  padding: 0;
+  line-height: 22px;
+  font-size: 11px;
+  color: #888;
+}
+
+.kanji_strokes .kanji_play_button {
+  position: absolute;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgba(0, 0, 0, 0.6);
+  border: none;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+/* Jisho */
+.jisho-iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+}
