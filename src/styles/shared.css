@@ -6,9 +6,13 @@
 /* Colors */
 
 :root {
-  /* Gradient Background */
+  /* Gradient Background - Meaning (card1) */
   --light-blue: #8ec5fc;
   --light-purple: #e0c3fc;
+
+  /* Gradient Background - Writing (card2) */
+  --yellow: #fbda61;
+  --pink: #ff5acd;
 
   /* Card Background */
   --translucent-off-white: rgba(245, 245, 245, 0.3);
@@ -18,9 +22,24 @@
   --light-yellow: #f6e16d;
 }
 
-/* HTML */
+/* Anki wrapping elements */
 
-html {
+.card,
+#qa {
+  min-height: 100vh !important;
+  max-height: 100vh !important;
+  min-width: 100vw !important;
+  max-width: none !important;
+
+  margin: unset !important;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Meaning */
+
+.card1 {
   background-color: var(--light-blue);
   background-image: linear-gradient(
     62deg,
@@ -29,9 +48,17 @@ html {
   );
 }
 
+/* Writing */
+
+.card2 {
+  background-color: var(--yellow);
+  background-image: linear-gradient(45deg, var(--yellow) 0%, var(--pink) 100%);
+  background-attachment: fixed;
+}
+
 /* Card */
 
-.card {
+.main {
   background-color: var(--translucent-off-white);
 
   display: flex;
@@ -52,7 +79,7 @@ html {
 /* Card (mobile) */
 
 @media (max-width: 800px) {
-  .card {
+  .main {
     width: 70%;
   }
 }
