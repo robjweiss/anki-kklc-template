@@ -1,3 +1,4 @@
-@import "shared.scss";
-@import "cards/meaning.scss";
-@import "cards/writing.scss";
+@use "shared.scss";
+@use "cards/meaning";
+@use "cards/writing";
+@use "mixins/responsive";
