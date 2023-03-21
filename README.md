@@ -8,4 +8,14 @@ Node 19
 
 ## Getting Started
 
-Install project dependencies with `npm install` and run `npm start` to run a simple http server.
+Install project dependencies with `npm install` and run `npm start`.
+
+## Scripts
+
+### Serve
+
+Run a simple HTTP server
+
+### Compile
+
+Compile SCSS to CSS

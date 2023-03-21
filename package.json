@@ -4,7 +4,9 @@
   "description": "Anki card templates for Kodansha Kanji Learner's Course",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -c-1",
+    "start": "npm run serve & npm run compile",
+    "serve": "http-server -c-1",
+    "compile": "sass --watch src/styles/main.scss:build/styles/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +24,7 @@
   },
   "homepage": "https://github.com/robjweiss/anki-kklc-template#readme",
   "devDependencies": {
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "sass": "^1.59.3"
   }
 }
